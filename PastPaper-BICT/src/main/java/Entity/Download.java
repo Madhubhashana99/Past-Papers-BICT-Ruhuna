@@ -39,7 +39,7 @@ public class Download {
         return paper;
     }
 
-    public void setPaper(Entity.Paper paper) {
+    public void setPaper(Paper paper) {
         this.paper = paper;
     }
 
@@ -51,7 +51,7 @@ public class Download {
         this.downloadCount = downloadCount;
     }
 
-    public Download(Long id, String fileName, Entity.Paper paper, Long downloadCount) {
+    public Download(Long id, String fileName, Paper paper, Long downloadCount) {
         this.fileName = fileName;
         this.paper = paper;
     }
