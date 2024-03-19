@@ -35,7 +35,7 @@ public class Download {
         this.fileName = fileName;
     }
 
-    public Entity.Paper getPaper() {
+    public Paper getPaper() {
         return paper;
     }
 
@@ -52,7 +52,9 @@ public class Download {
     }
 
     public Download(Long id, String fileName, Paper paper, Long downloadCount) {
+        this.id = id;
         this.fileName = fileName;
         this.paper = paper;
+        this.downloadCount = downloadCount;
     }
 }
