@@ -4,6 +4,7 @@ package Entity;
 import jakarta.persistence.*;
 
 @Entity
+@Table
 public class Download {
 
     @Id
@@ -18,6 +19,17 @@ public class Download {
     private Paper paper;
 
     private Long downloadCount;
+
+    public Download(Long id, String fileName, Paper paper, Long downloadCount) {
+        this.id = id;
+        this.fileName = fileName;
+        this.paper = paper;
+        this.downloadCount = downloadCount;
+    }
+
+    public Download() {
+
+    }
 
     public Long getId() {
         return id;
@@ -51,10 +63,5 @@ public class Download {
         this.downloadCount = downloadCount;
     }
 
-    public Download(Long id, String fileName, Paper paper, Long downloadCount) {
-        this.id = id;
-        this.fileName = fileName;
-        this.paper = paper;
-        this.downloadCount = downloadCount;
-    }
+
 }

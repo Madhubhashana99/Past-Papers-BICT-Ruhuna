@@ -3,8 +3,10 @@ package Entity;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
+import jakarta.persistence.Table;
 
 @Entity
+@Table
 public class User {
 
     @Id
@@ -22,6 +24,10 @@ public class User {
 
     @Column(nullable = false, length = 100) // Consider appropriate length based on password complexity
     private String password;
+
+    public User() {
+
+    }
 
     public String getUser_id() {
         return user_id;

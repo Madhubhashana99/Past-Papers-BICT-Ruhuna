@@ -3,8 +3,10 @@ package Entity;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
+import jakarta.persistence.Table;
 
 @Entity
+@Table
 public class Paper {
     @Id
     @Column(length = 10,nullable = false)
@@ -21,6 +23,10 @@ public class Paper {
 
     @Column(nullable = false)
     private String coursecode;
+
+    public Paper() {
+
+    }
 
     public String getPaper_id() {
         return paper_id;
