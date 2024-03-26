@@ -42,4 +42,15 @@ public class UserController {
         }
     }
 
+    //Update user
+    @PutMapping("/{id}")
+    public ResponseEntity<User> updateUser(@PathVariable("id") Long id, @RequestBody User user){
+        User updatedUser = userService.updateUser(id, user);
+        if(updatedUser != null){
+            return new ResponseEntity<>(updatedUser,HttpStatus.OK);
+        }else {
+            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+        }
+    }
+
 }
